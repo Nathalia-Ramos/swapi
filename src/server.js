@@ -1,5 +1,5 @@
-import { App } from '../src/app.js'
+import { App } from '../src/app.js';
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
-new App().startServer(PORT)
+new App().startServer(PORT);
