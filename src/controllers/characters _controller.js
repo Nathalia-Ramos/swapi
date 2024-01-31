@@ -23,8 +23,8 @@ export class CharacterController {
           }
         });
       });
-
-      return res.status(200).send(characters.results);
+        characters.results.sort((a, b) => a.name.localeCompare(b.name));
+        res.status(200).send(characters.results);
     } catch (err) {
       console.log(err);
     }
