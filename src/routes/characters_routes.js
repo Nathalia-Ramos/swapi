@@ -5,6 +5,6 @@ const router = Router();
 
 const characterController = new CharacterController();
 
-router.get("/characters", (req, res) => characterController.getAll(req, res));
+router.get("/", (req, res) => characterController.getAll(req, res));
 
 export default router;

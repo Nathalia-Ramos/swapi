@@ -1,4 +1,4 @@
-import routes from './routes/charactersRoutes.js';
+import routes from '../src/routes/index.js';
 import express from 'express';
 
 class App {
