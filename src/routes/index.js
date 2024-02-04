@@ -11,5 +11,6 @@ router.use("/characters", charactersRoutes);
 router.use("/planets", planetsRoutes);
 router.use("/starships", starshipsRoutes);
 router.use("/films", filmsRoutes);
+router.use("/search_film", filmsRoutes);
 
 export default router;

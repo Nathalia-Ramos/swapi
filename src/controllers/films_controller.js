@@ -1,3 +1,4 @@
+import { FilmsModel } from '../models/films_model.js';
 import { Swapi } from '../swapi.js';
 import request from 'request';
 
@@ -35,4 +36,18 @@ export class FilmsController {
       console.log(err);
     }
   }
+
+  async createSearchInput(req, res){
+    try {
+        const { search } = req.body;
+
+        console.log(search);
+        const filmsModel = new FilmsModel();
+        await filmsModel.createSearchInput({ search });
+
+        res.status(201).json({ message: 'Pesquisa cadastrada com sucesso!' });
+    } catch (error) {
+        console.log(error);
+    }
+  } 
 }
