@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch ./src/server.js "
+    "start": "nodemon ./src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
   "dependencies": {
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
+    "nodemon": "^3.0.3",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9"
   },

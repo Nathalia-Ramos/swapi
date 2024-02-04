@@ -2,12 +2,12 @@ import { Swapi } from '../swapi.js';
 import request from 'request';
 
 export class PlanetController {
-  constructor () {
-    this.Swapi = new Swapi();
-    this.address = this.Swapi.api + '/planets';
+  constructor() {
+    this.swapi = new Swapi();
+    this.address = `${this.swapi.api}/planets`;
   }
 
-  async getAll (req, res) {
+  async getAll(req, res) {
     try {
       const { page = 1 } = req.query;
 
@@ -23,10 +23,16 @@ export class PlanetController {
           }
         });
       });
+
+      if (planets && planets.results) {
         planets.results.sort((a, b) => parseFloat(b.diameter) - parseFloat(a.diameter));
         res.status(200).send(planets.results);
+      } else {
+        res.status(404).send({ error: 'Results not found' });
+      }
     } catch (err) {
       console.log(err);
+      res.status(500).send({ error: 'Internal server error' });
     }
   }
 }
