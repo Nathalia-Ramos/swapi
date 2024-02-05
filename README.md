@@ -26,7 +26,7 @@ Após concluir a instalação e configuração conforme descrito acima, siga os 
 
    npm start
 
-> **Nota**: Você pode alterar a porta no arquivo .env mas aconselho a deixar a porta 4000
+> **Nota**: Embora seja possível personalizar a porta no arquivo .env, recomenda-se manter a configuração padrão na porta 4000.
 
 **Rotas**:
 - Listar Personagens: GET /characters
