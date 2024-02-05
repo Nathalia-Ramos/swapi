@@ -35,6 +35,7 @@ Após concluir a instalação e configuração conforme descrito acima, siga os 
 - Listar Filmes: GET /films
 - Buscar Filmes: POST /search_film
     A pesquisa deve ser enviada no corpo da requisição, seguindo esta estrutura:
+    
         {
             "search": "The Rise of Skywalker"
         }
